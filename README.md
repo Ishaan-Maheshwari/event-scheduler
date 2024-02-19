@@ -10,3 +10,7 @@ Event Scheduling System in Flask
 2. run the main.py file
 
 ` python main.py `
+
+### Other details :
+
+postman collection is added in the root directory as Event Scheduler.postman_collection.json
