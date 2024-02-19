@@ -1,0 +1,3 @@
+FLASK
+Flask-SQLAlchemy
+flask-restful
