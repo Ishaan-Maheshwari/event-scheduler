@@ -35,6 +35,8 @@ from application.api import EventList
 
 api.add_resource(EventList, '/events', '/event/<int:event_id>')
 
+from application.controller import *
+
 if __name__ == '__main__':
   # Run the Flask app
   app.run(host='0.0.0.0',port=8080)

@@ -1,11 +1,11 @@
 from flask import current_app as app
 from sqlalchemy import or_
-from models import Event
+from .models import Event
 
 @app.route('/search/<keyword>', methods=['GET'])
 def search(keyword):
     search_results = []
-    
+
     events = Event.query.filter(or_(Event.title.contains(keyword), Event.description.contains(keyword))).all()
     for event in events:
         search_results.append(
