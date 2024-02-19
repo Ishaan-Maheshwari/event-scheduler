@@ -10,6 +10,7 @@ class Event(db.Model):
     start_date = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
     end_date = db.Column(db.DateTime, default=lambda: datetime.utcnow() + timedelta(hours=1))
     is_active = db.Column(db.Boolean, default=True)
+    is_recurring = db.Column(db.Boolean, default=False)
     recurrences = db.relationship('Recurrence', backref='event', lazy='dynamic')
 
 class Recurrence(db.Model):

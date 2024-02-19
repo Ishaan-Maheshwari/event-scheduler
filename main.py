@@ -32,10 +32,13 @@ def do_init_setup():
   return "Database setup complete"
 
 from application.api import EventList
+from application.api import ReccuringEvent
 
 api.add_resource(EventList, '/events', '/event/<int:event_id>')
+api.add_resource(ReccuringEvent, '/recurrences', '/recurrence/<int:recurrence_id>')
 
 from application.controller import *
+
 
 if __name__ == '__main__':
   # Run the Flask app
